@@ -5,10 +5,10 @@ FROM python:3.9
 RUN apt-get update -y && apt-get upgrade -y
 
 # Définir les variables d'environnement pour configurer Python
-ENV PYTHONUNBUFFERED 1  
-ENV PYTHONDONTWRITEBYTECODE 1 
-ENV APP_HOME /invoice  
-ENV XDG_RUNTIME_DIR /tmp/runtime-root  
+ENV PYTHONUNBUFFERED=1  
+ENV PYTHONDONTWRITEBYTECODE=1 
+ENV APP_HOME=/invoice  
+ENV XDG_RUNTIME_DIR=/tmp/runtime-root  
 
 # Créer le répertoire d'exécution et définir les permissions
 RUN mkdir -p /tmp/runtime-root
